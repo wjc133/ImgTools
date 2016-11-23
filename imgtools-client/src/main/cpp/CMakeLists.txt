@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project(EventListener)
+set(BUILD_USE_64BITS on)
+FIND_PACKAGE(JNI REQUIRED)
+include_directories(${JNI_INCLUDE_DIRS})
+SET(LIBHELLO_SRC com_elite_tools_imgtools_hook_SysHook.cpp)
+ADD_LIBRARY(eventLib SHARED ${LIBHELLO_SRC})
